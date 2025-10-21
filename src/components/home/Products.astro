@@ -1,0 +1,109 @@
+---
+
+const products = [
+    {
+        category: 'Tropical Fruits',
+        // emoji: '🥭',
+        emoji: '🍍',
+        description: 'Premium tropical fruits sourced fresh from Kerala’s best farms:',
+        gradient: 'from-yellow-200 to-orange-200',
+        items: ['Pineapple', 'Rambutan', 'Mangosteen' ]
+    },
+    {
+        category: 'Indian Spices',
+        emoji: '🌶️',
+        description: 'Authentic, aromatic spices trusted worldwide for their purity:',
+        gradient: 'from-orange-200 to-yellow-200',
+        items: ['Cardamom', 'Black Pepper', 'Cinnamon', 'Cloves']
+    },
+    // {
+    //     category: 'Fresh Fruits',
+    //     emoji: '🍍',
+    //     description: 'Seasonal fruits and exotic varieties for diverse markets',
+    //     gradient: 'from-green-200 to-emerald-200',
+    //     items: ['Bananas', 'Papaya', 'Guava', 'Jackfruit']
+    // },
+    // {
+    //     category: 'Fresh Vegetables',
+    //     emoji: '🥕',
+    //     description: 'Farm-fresh vegetables and leafy greens',
+    //     gradient: 'from-green-200 to-emerald-200',
+    //     items: ['Carrots', 'Broccoli', 'Spinach', 'Bell Peppers']
+    // },
+    // {
+    //     category: 'Berries & Grapes',
+    //     emoji: '🍇',
+    //     description: 'Premium berries and table grapes',
+    //     gradient: 'from-purple-200 to-pink-200',
+    //     items: ['Grapes', 'Strawberries', 'Blueberries', 'Raspberries']
+    // },
+    // {
+    //     category: 'Root Vegetables',
+    //     emoji: '🥔',
+    //     description: 'High-quality potatoes, onions, and root crops',
+    //     gradient: 'from-amber-200 to-orange-200',
+    //     items: ['Potatoes', 'Onions', 'Sweet Potatoes', 'Garlic']
+    // },
+    // {
+    //     category: 'Stone Fruits',
+    //     emoji: '🍑',
+    //     description: 'Juicy peaches, plums, and stone fruit varieties',
+    //     gradient: 'from-red-200 to-pink-200',
+    //     items: ['Peaches', 'Plums', 'Cherries', 'Apricots']
+    // }
+];
+
+---
+<section id="home-products-section" class="home-section py-20 bg-white">
+    <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Our <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Premium</span> Products
+        </h2>
+        <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+        From the rich soils of Kerala to global markets, Kalnex delivers handpicked
+        tropical fruits and spices that meet the highest international standards and
+        delight taste buds worldwide.
+        </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        {products.map((product, index) => (
+        <div class="group cursor-pointer">
+            <div class={`bg-gradient-to-br ${product.gradient} rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full group-hover:scale-105`}>
+            <div class="text-center mb-6">
+                <div class="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                {product.emoji}
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">{product.category}</h3>
+                <p class="text-gray-700">{product.description}</p>
+            </div>
+            
+            <div class="space-y-2">
+                {product.items.map((item, itemIndex) => (
+                <div class="flex items-center justify-between bg-white/50 rounded-lg px-4 py-2">
+                    <span class="font-medium text-gray-800">{item}</span>
+                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                </div>
+                ))}
+            </div>
+            </div>
+        </div>
+        ))}
+    </div>
+    
+    <!-- <div class="text-center mt-12">
+        <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full font-semibold hover:from-green-700 hover:to-emerald-700 transition-colors cursor-pointer">
+        View Complete Catalog
+        </div>
+    </div> -->
+    </div>
+</section>
+
+<style>
+    #home-products-section {
+        color: #000000;
+        padding: 3rem 0;
+        /* background-color: #32df4fe1 */
+    }
+</style>

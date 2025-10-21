@@ -1,0 +1,51 @@
+---
+import { certificates } from '../../data/data.json';
+---
+
+<section id="home-about-section" class="flex flex-col justify-center items-center home-section bg-gradient-to-br from-green-50 to-emerald-50">
+	<div class="container mx-auto px-4 lg:px-8 xl:px-16 2xl:px-30 flex flex-col items-start">
+        <h2 class="text-4xl font-bold text-gray-900 mb-5">
+                About <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Kalnex</span>
+              </h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-3">
+            Kalnex is a growing force in the global export market, delivering Kerala's finest tropical fruits and spices to the 
+            world. We specialize in supplying premium <span class="font-semibold text-black">rambutan, mangosteen, and pineapple</span>, along with 
+            high-quality <span class="font-semibold text-black">cardamom, pepper, cinnamon, and cloves</span>.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-3">
+            Our mission is to connect the rich flavours of India with global consumers by maintaining the
+            highest standards in sourcing, handling, and international logistics.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            With a focus on <span class="font-semibold text-black">freshness, integrity, and customer satisfaction</span>, Kalnex is your reliable
+            partner for authentic tropical exports from the heart of Kerala.
+        </p>
+        <!-- <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-full font-semibold hover:from-green-700 hover:to-emerald-700 transition-colors cursor-pointer">
+            View Certificates
+        </div> -->
+        <div class="flex flex-col items-center justify-start w-full mt-12">
+            <p class="text-xl font-semibold mb-3">CERTIFICATES</p>
+            <div class="flex flex-col items-center md:flex-row md:space-x-4 flex-wrap justify-center px-3">
+                { certificates?.map(certificate => (
+                    <p class="certificate bg-gradient-to-r from-green-600 to-emerald-600 text-white w-80 md:w-auto">{certificate}</p>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #home-about-section {
+        color: #000000;
+        padding: 3rem 0;
+        /* background-color: #32df4fe1 */
+    }
+    .certificate {
+        font-size: 1.125rem; /* 18px */
+        /* color: #4a5568;
+        background-color: #FFFFFF; */
+        margin-bottom: 0.5rem;
+        padding: 16px;        
+        border-radius: 12px;
+    }
+</style>

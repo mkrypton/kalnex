@@ -1,0 +1,75 @@
+---
+import { Shield, Truck, Leaf, Clock, Award, Globe } from '@lucide/astro';
+
+
+const features = [
+    {
+        icon: Shield,
+        title: 'Quality Assurance',
+        description: 'Thorough inspection and sorting to ensure every fruit and spice meets international export standards',
+        color: 'from-green-500 to-emerald-600'
+    },
+    {
+        icon: Truck,
+        title: 'Global Logistics',
+        description: 'Streamlined logistics and reliable cold-chain support to maintain freshness from farm to foreign market',
+        color: 'from-blue-500 to-blue-600'
+    },
+    {
+        icon: Leaf,
+        title: 'Pure & Authentic',
+        description: 'We supply unadulterated, naturally grown produce—sourced directly from trusted farms across Kerala',
+        color: 'from-green-600 to-lime-600'
+    },
+    {
+        icon: Clock,
+        title: 'Timely Delivery',
+        description: 'Fast processing, flexible scheduling, and committed shipping timelines ensure prompt global delivery',
+        color: 'from-orange-500 to-red-500'
+    },
+    {
+        icon: Award,
+        title: 'Certified Excellence',
+        description: 'Compliance with global food safety standards. Documentation and certifications provided on request',
+        color: 'from-purple-500 to-purple-600'
+    },
+    {
+        icon: Globe,
+        title: 'Worldwide Reach',
+        description: 'Exporting to a growing network of clients across the Middle East, Europe, and other global markets',
+        color: 'from-indigo-500 to-indigo-600'
+    }
+];
+---
+
+<section id="home-why-kalnex-section" class="home-section py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Why Choose <span class="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Kalnex</span>
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        We combine traditional farming excellence with modern export expertise 
+        to deliver the freshest produce to markets worldwide.
+        </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+            <div class={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+            <feature.icon class="h-6 w-6 text-white" />
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+            <p class="text-gray-600 leading-relaxed">{feature.description}</p>
+        </div>
+        ))}
+    </div>
+    </div>
+</section>
+
+<style>
+    #home-why-kalnex-section {
+    
+    }
+</style>

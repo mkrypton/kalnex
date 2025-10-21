@@ -1,0 +1,15 @@
+{
+    "certificates": [
+        "FSSAI Central License",
+        "APEDA",
+        "IEC (Import Export Code)",
+        "Phytosanitary Certification",
+        "Certificate of Origin"
+    ],
+    "whyKalnex": [],
+    "contact": {
+        "phone": [ { "text": "+91 7994644184", "value": "+917994644184" } ],
+        "email": [ "kalnexglobal@gmail.com" ],
+        "address": [ "Office #27/217/b,", "Global 247 Spaces,", "Thodupuzha, Idukki", "Kerala, 685584" ]
+    }
+}
